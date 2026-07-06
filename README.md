@@ -48,6 +48,97 @@ code .
 ```
 `code` 명령이 안 먹으면: VS Code에서 `⌘⇧P` → "Shell Command: Install 'code' command in PATH" 실행 → 터미널 재시작.
 
+## 🐍 환경 설정 (Python + conda)
+
+이 프로젝트는 `doit`이라는 이름의 conda 가상환경(Python 3.11)에서 작업합니다.
+컴퓨터 상태에 따라 아래 두 가지 경로 중 하나를 따라가세요.
+
+---
+
+### A. conda가 이미 설치되어 있는 경우
+
+터미널에 아래 입력해서 확인:
+```bash
+conda --version
+```
+버전이 나오면 이 경로로 진행:
+
+```bash
+conda create -n doit python=3.11 -y
+conda activate doit
+```
+
+확인:
+```bash
+python --version     # Python 3.11.x
+which python          # .../envs/doit/bin/python 경로면 정상
+```
+
+---
+
+### B. conda가 없는 경우 (Mac 기준)
+
+#### 1. Homebrew 확인 및 설치
+```bash
+brew --version
+```
+없으면:
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+#### 2. miniforge(conda) 설치
+```bash
+brew install miniforge
+```
+
+#### 3. conda 초기화
+```bash
+conda init zsh
+```
+**⚠️ 중요: 이 명령 실행 후 터미널을 완전히 종료하고 새로 열어야 적용됩니다.**
+같은 창에서 계속하면 `conda: command not found`가 뜹니다.
+
+#### 4. 새 터미널에서 확인
+```bash
+conda --version
+```
+버전이 나오면 → 위 **A 항목**으로 이동해서 `doit` 환경 생성.
+
+---
+
+### VS Code에서 인터프리터 연결
+
+1. `⌘⇧P` → `Python: Select Interpreter`
+2. 목록에서 `Python 3.11.x ('doit': conda)` 선택
+3. 목록에 안 보이면 "Enter interpreter path" → 직접 입력:
+
+### C. Windows 사용자
+
+#### 1. conda 있는지 확인
+PowerShell(관리자 아님, 일반)에서:
+```powershell
+conda --version
+```
+버전 나오면 → 아래 "환경 생성"으로 바로 이동.
+
+#### 2. conda 없으면 — Miniforge 설치
+1. https://github.com/conda-forge/miniforge#miniforge3 접속
+2. **Miniforge3 Windows x86_64** 설치파일 다운로드
+3. 설치 시 **"Add Miniforge3 to my PATH environment variable"** 체크 (기본은 비추천으로 되어 있는데, 이거 체크 안 하면 매번 콘솔에서 conda 인식 안 됨 — 반드시 체크)
+4. 설치 완료 후 **PowerShell 완전히 재시작**
+
+#### 3. 확인
+```powershell
+conda --version
+```
+
+#### 4. 환경 생성 (여기부터는 Mac과 동일)
+```powershell
+conda create -n doit python=3.11 -y
+conda activate doit
+```
+
 ## ✅ 작업 규칙
 
 1. 자기 폴더만 수정. `answer/` 와 남의 폴더는 건드리지 않는다.
