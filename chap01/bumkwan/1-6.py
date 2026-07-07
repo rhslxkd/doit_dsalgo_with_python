@@ -1,3 +1,5 @@
+# 실습 1-5의 원래 모습
+
 n = int(input('정수를 입력하세요.: '))
 
 if n == 1:
@@ -7,4 +9,4 @@ elif n == 2:
 elif n == 3:
     print('C')
 else :
-    pass
+    pass # 4 이상의 수는 pass문 실행

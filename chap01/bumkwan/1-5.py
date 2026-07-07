@@ -1,3 +1,5 @@
+# 4개로 분기하는 조건문
+
 n = int(input('정수를 입력하세요.: '))
 
 if n == 1:
@@ -6,5 +8,3 @@ elif n == 2:
     print('B')
 elif n == 3:
     print('C')
-else :
-    pass
