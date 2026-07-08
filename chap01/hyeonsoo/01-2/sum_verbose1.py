@@ -13,6 +13,6 @@ for i in range(a, b+1):
         print(f"{i} + ", end='')
     else:
         print(f"{i} =", end='')
-    sum += 1
+    sum += i
 
 print(sum)
