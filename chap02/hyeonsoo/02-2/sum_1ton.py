@@ -1,0 +1,10 @@
+def sum_1ton(n):
+    """1부터 n까지의 합"""
+    s = 0
+    while n > 0:
+        s += n
+        n -= 1
+    return s
+
+x = int(input("x의 값을 입력하시오"))
+print(f'1부터 {x}까지의 값은 {sum_1ton(x)}이다.')
