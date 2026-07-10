@@ -6,7 +6,8 @@ def reverse_array(a: MutableSequence) -> None:
     n = len(a)
     for i in range(n // 2):
         a[i], a[n - i - 1] = a[n - i - 1], a[i]
-
+    # return 안해도 되는 이유 ->Annotation이 None인 이유: 직접 원본을 수정한 것. 값의 복사본이 아니라 같은 객체를 가리키기 때문
+    
 
 if __name__ == '__main__':
     print('배열 원소를 역순으로 정렬')

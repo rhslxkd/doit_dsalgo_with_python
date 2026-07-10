@@ -8,5 +8,5 @@ for _ in range(n):
     if r == 13:
         print('\n프로그램중단')
         break
-    else:
-        print('\n난수생성 종료')
+else: 
+      print('\n난수생성 종료')

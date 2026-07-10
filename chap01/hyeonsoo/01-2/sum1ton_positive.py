@@ -1,7 +1,7 @@
 while True:
     n = int(input("값 입력"))
     if n > 0:
-        break
+        break # Rmsgdjwnrl
 
 sum = 0
 i = 1
