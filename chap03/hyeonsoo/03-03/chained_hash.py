@@ -12,7 +12,7 @@ class Node:
         self.next = next
 
 class ChainedHash:
-    def __init__(self, capacity: int) -> int:
+    def __init__(self, capacity: int) -> None:
         """초기화"""
         self.capacity = capacity
         self.table = [None] * self.capacity
