@@ -1,0 +1,4 @@
+x = ['Jhon', 'George', 'Paul', 'Ringo']
+
+for i, name in enumerate(x):
+    print(f'x[{i}] = {x[i]}')
