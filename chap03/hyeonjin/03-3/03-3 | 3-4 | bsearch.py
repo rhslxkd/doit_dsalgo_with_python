@@ -23,7 +23,7 @@ if __name__ == '__main__':
 
     print('배열 데이터를 오름차순으로 입력하세요.')
 
-    x[0] = int(input('ㅌ[0]: '))
+    x[0] = int(input('x[0]: '))
 
     for i in range(1, num):
         while True:
