@@ -1,4 +1,4 @@
-# [Do it! 실습 5-6] 하노이의 탑 구현하기
+# 하노이의 탑 구현하기
 
 def move(no: int, x: int, y: int) -> None:
     """원반을 no개를 x 기둥에서 y 기둥으로 옮김"""
