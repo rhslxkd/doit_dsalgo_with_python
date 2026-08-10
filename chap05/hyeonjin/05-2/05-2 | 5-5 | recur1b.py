@@ -1,4 +1,4 @@
-from stack import Stack
+from stack import Stack # type: ignore
 
 def recur(n: int) -> int:
     s = Stack(n)
