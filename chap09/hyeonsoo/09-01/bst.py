@@ -121,7 +121,7 @@ class BinarySearchTree:
 
     def min_key(self) -> Any:
         """가장 작은 키"""
-        if self.root is not None:
+        if self.root is None:
             return None
         p = self.root
         while p.left is not None:
